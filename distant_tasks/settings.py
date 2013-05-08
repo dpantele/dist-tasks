@@ -146,13 +146,19 @@ INSTALLED_APPS = (
     'crispy_forms',
     #'devserver',
     'task_queue',
+    'users',
 )
+
+SESSION_ENGINE = 'django.contrib.sessions.backends.signed_cookies'
+
+AUTH_USER_MODEL = 'users.MyUser'
 
 DEVSERVER_ARGS = [
     'werkzeug',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap'
+CRISPY_FAIL_SILENTLY = not DEBUG
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

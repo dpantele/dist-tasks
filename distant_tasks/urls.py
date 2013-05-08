@@ -2,11 +2,13 @@ from django.conf.urls import patterns, include, url
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
+from users.views import LoginView
+
 admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'distant_tasks.views.home', name='home'),
+    url(r'^$', LoginView.as_view(), name='home'),
     # url(r'^distant_tasks/', include('distant_tasks.foo.urls')),
     url(r'^admin_tools/', include('admin_tools.urls')),
     # Uncomment the admin/doc line below to enable admin documentation:
