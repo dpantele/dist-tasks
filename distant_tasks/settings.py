@@ -62,6 +62,17 @@ TEMPLATE_LOADERS = (
     #     'django.template.loaders.eggs.Loader',
 )
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
+    'django.core.context_processors.static',
+    'django.core.context_processors.tz',
+    'django.contrib.messages.context_processors.messages',
+    'django.core.context_processors.request',
+)
+
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
@@ -117,6 +128,10 @@ ROOT_URLCONF = 'distant_tasks.urls'
 WSGI_APPLICATION = 'distant_tasks.wsgi.application'
 
 INSTALLED_APPS = (
+    'admin_tools',
+    'admin_tools.theming',
+    'admin_tools.menu',
+    'admin_tools.dashboard',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -126,15 +141,18 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
-    # 'django.contrib.admindocs',
+    'django.contrib.admindocs',
     'django_extensions',
-    'devserver',
+    'crispy_forms',
+    #'devserver',
     'task_queue',
 )
 
 DEVSERVER_ARGS = [
     'werkzeug',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap'
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
