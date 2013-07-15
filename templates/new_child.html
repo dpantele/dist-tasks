@@ -1,0 +1,25 @@
+{% extends "base_auth.html" %}
+
+{% block title %}Управление участниками - {{ block.super }}{% endblock %}
+
+{% block content %}
+    <h1>Управление участниками</h1>
+<div class="alert alert-success">
+  Добро пожаловать, Дима. Если вы вошли с чужого компьютера, не забудьте по завершении работы нажать ссылку &laquo;Выйти&raquo;
+  выше.
+</div>
+<div class="row"><div class="offset2 span9" style="border-left: #ddd solid 1px; padding: 10px 0">
+    <div class="span2" style="margin-left: -140px; text-align: right;">
+        <div><a class="btn btn-success" style="padding: 3px 5px 3px 5px; border-radius: 6px 0 0 6px">
+            <span style="font-weight: bold">+</span> Новый участник
+        </a>
+        </div>
+    </div>
+
+    <p style="text-align: justify;  padding-left: 15px">Приветствуем вас в нашем кружке. Вы ещё не зарегистрировали ни одного участника.
+    Для регистрации воспользуйтесь ссылкой слева. Если вы хотите изменить e-mail, изменить ваши подписки, добавить или
+    заменить пароль, то вы можете это сделать <a href="#">на странице вашего профиля</a></p>
+    <p style="text-align: justify; padding-left: 15px">Если у вас будут какие-либо вопросы, возможно вы найдёте ответы на <a href="#">странице
+        информации о кружке</a>. Также их можно писать на наш адрес <a href="mailto:dist@mathbaby.ru">dist@mathbaby.ru</a>.</p>
+    <p style="padding-left: 15px"><em>С уважением,<br/>Команда Творческой Лаборатории &laquo;Дважды Два&raquo;</em></p></div></div>
+{% endblock %}

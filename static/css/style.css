@@ -1,0 +1,155 @@
+body {
+    background: url(../img/bg_top.jpg) repeat-x #ffffff;
+}
+
+form.login-form {
+    width: 500px;
+    margin: auto;
+}
+
+#header {
+    padding-top: 15px;
+}
+
+.header-text {
+    margin-top: 10px;
+    text-align: right;
+    font-family: arial, sans-serif;
+    font-size: 17px;
+    color: #ffffff;
+}
+
+.header-text a, .header-text a:focus {
+    color: #ffffff;
+}
+
+.site-title {
+    font-family: inherit;
+    font-weight: bold;
+    color: inherit;
+    text-rendering: optimizelegibility;
+    font-size: 33.5px;
+    line-height: 40px;
+}
+
+.login-email {
+    margin-top: 15px;
+}
+
+.login-email label {
+    font-size: 18px !important;
+    line-height: 30px !important;
+}
+
+.login-email input {
+    width: 250px;
+    height: 30px !important;
+    line-height: 30px !important;
+    font-size: 18px !important;
+    /*margin-bottom: 10px !important;*/
+    /*padding: 11px 19px !important;*/
+    /*-webkit-border-radius: 6px;*/
+    /*-moz-border-radius: 6px;*/
+    /*border-radius: 6px;*/
+}
+
+.login-text p {
+    padding: 0 25px;
+    text-align: justify;
+}
+
+.login-buttons > div {
+    text-align: center;
+}
+
+.login-buttons > div:nth-child(3) {
+    padding-top: 8px;
+}
+
+.login-buttons > div:nth-child(3) input[type=password] {
+    width: 150px;
+}
+
+
+/**********************************************
+*******************NAVIGATION******************
+**********************************************/
+
+/**
+ * 6.NAVIGATION
+ */
+
+nav ul {
+    list-style:none;
+}
+
+#navigation {
+  clear: both;
+  margin: 15px 0 0;
+  padding: 0;
+}
+
+#navigation ul.main-menu {
+  margin: 0;
+  padding: 0;
+}
+
+#navigation ul.main-menu li {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+#navigation ul.main-menu li a {
+  display: block;
+  padding: 0 2em 0 0;
+}
+
+#navigation ul.secondary-menu {
+  margin: 0;
+  padding: 0;
+}
+
+#navigation ul.secondary-menu li {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+#navigation ul.secondary-menu li a {
+  display: block;
+  padding: 0 2em 0 0;
+}
+
+#navigation {
+  background:url(../img/bg_menu.gif) repeat-x;
+  height:33px;
+  border-radius:9px;
+  padding-left:20px;
+}
+
+#navigation ul {
+  padding-top:5px !important;
+}
+
+#navigation li {
+  border-right:1px solid #94C594;
+}
+
+#navigation li.last {
+  border-right:0;
+}
+
+#navigation a {
+  line-height:20px;
+  font-size:18px;
+  color:#ffffff;
+  text-decoration:none;
+  padding:0 12px !important;
+}
+
+#navigation a.active,
+#navigation a:hover {
+  color:#fffc00;
+  text-decoration:underline;
+}
