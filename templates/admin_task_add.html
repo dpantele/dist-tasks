@@ -1,0 +1,60 @@
+{% extends 'base_admin.html' %}
+{% block nav %}
+    <li class="active"><a href="#">Задания</a></li>
+    <li><a href="admin_students.html">Участники</a></li>
+    <li><a href="new_students.html">Новые участники</a></li>
+{% endblock %}
+{% block content %}
+    <h1>Новое задание</h1>
+    <form class="form-horizontal">
+  <div class="control-group">
+    <label class="control-label" for="inputTitle">Заголовок</label>
+    <div class="controls">
+      <input type="text" id="inputTitle" class="input-block-level" placeholder="Заголовок" required>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputDescription">Описание</label>
+    <div class="controls">
+      <textarea id="inputDescription" class="input-block-level" placeholder="Описание"></textarea>
+    </div>
+  </div>
+        <div class="control-group">
+            <label class="control-label">Тип задания</label>
+            <div class="controls">
+                <label class="radio">
+                    <input type="radio" name="optionsType" id="optionsRadios1" value="task" required>
+                    Обычное задание
+                </label>
+                <label class="radio">
+                    <input type="radio" name="optionsType" id="optionsRadios2" value="test" required>
+                    Тестирование
+                </label>
+            </div>
+        </div>
+  <div class="control-group">
+    <label class="control-label" for="inputTestId">ID теста</label>
+    <div class="controls">
+      <input type="number" id="inputTestId" class="input-block-level" placeholder="ID теста" required>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputFile">Файл</label>
+    <div class="controls">
+      <input type="file" id="inputFile" class="input-block-level" required>
+    </div>
+  </div>
+      <div class="control-group">
+    <div class="controls">
+      <a href="admin_task_assign.html" class="btn btn-primary">Сохранить</a>
+    </div>
+  </div>
+    </form>
+{% endblock %}
+{% block script %}
+    <script type="text/javascript" >
+       $(document).ready(function() {
+          $("#inputDescription").markItUp(mySettings);
+       });
+    </script>
+{% endblock %}

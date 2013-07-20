@@ -1,7 +1,7 @@
-{% extends "base.html" %}
+{% extends "base_anon.html" %}
 
 {% block content %}
-    <p>Дистанционный кружок &laquo;Дважды Два&raquo; &mdash; математический кружок для школьников, в котором ученики
+    <p style="padding-top: 15px;">Дистанционный кружок &laquo;Дважды Два&raquo; &mdash; математический кружок для школьников, в котором ученики
         занимаются там, где им это удобно. <a href="#">Узнать подробнее о работе кружка</a></p>
     <form class="form-horizontal">
         <fieldset>
@@ -12,7 +12,7 @@
                 <label class="control-label" for="inputEmail">Email</label>
 
                 <div class="controls">
-                    <input type="email" id="inputEmail" name="email" autofocus tabindex="1">
+                    <input type="email" id="inputEmail" name="email"  value="{% block email %}{% endblock %}" autofocus tabindex="1">
                 </div>
             </div>
             <div class="login-choice">
@@ -32,12 +32,12 @@
                         <a href="register1.html" tabindex="3" class="btn btn-large btn-success">Зарегистрироваться</a>
                     </div>
                     <div class="span4">
-                        <input type="submit" value="Отправить ссылку" class="btn btn-large btn-primary" tabindex="4"/>
+                        <a href="link.html" tabindex="4" class="btn btn-large btn-primary">Отправить ссылку</a>
                     </div>
                     <div class="span4">
                         <div class="input-append">
                             <input type="password" placeholder="Пароль" name="password" tabindex="2"/>
-                            <input type="submit" value="Войти" class="btn" tabindex="5"/>
+                            <a href="index.html" class="btn" tabindex="5">Войти</a>
                         </div>
                     </div>
                 </div>

@@ -1,8 +1,23 @@
-{% extends "base.html" %}
+{% extends "base_anon.html" %}
 
 {% block title %}Регистрация - {{ block.super }}{% endblock %}
 
 {% block content %}
 <h1>Регистрация</h1>
-<p>Спасибо. Последуйте инструкциям в письме. Мы свяжемся со службой поддержки вашего e-mail для предотвращения попадания наших писем в спам.</p>
+    <form class="form-horizontal ">
+        <div class="control-group">
+            <label class="control-label" for="inputEmail">Правильный e-mail</label>
+
+            <div class="controls">
+                <input type="email" id="inputEmail" name="email" class="input-xlarge" required>
+                <span class="help-block">Обычно в качестве данных указывают имя и отчество или имя и фамилию, но
+                вы вольны указать то, что вам будет удобно.</span>
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="controls">
+                <a href="register1.html" class="btn btn-primary">Изменить</a>
+            </div>
+        </div>
+    </form>
 {% endblock %}

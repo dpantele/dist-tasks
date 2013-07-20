@@ -1,0 +1,35 @@
+{% extends "base_auth.html" %}
+{% load webdesign %}
+
+{% block title %}Петухов Алексей - Задания - {{ block.super }}{% endblock %}
+
+{% block content %}
+    <div class="page-header">
+        <h1>Петухов Алексей <small>Задания</small></h1>
+    </div>
+    <div class="tabbable tabs-left">
+        <ul class="nav nav-tabs">
+            <li><a href="index.html"><i class="icon-home"></i> Главная</a></li>
+            <li><a href="tested_child.html">Иванов Иван</a></li>
+            <li class="active"><a href="task.html">Петухов Алексей</a></li>
+            <li style="margin-top: 20px"><a href="new_child.html"><i class="icon-plus-sign"></i> Новый участник</a></li>
+            <li><a href="profile.html"><i class="icon-cogs"></i> Настройки</a></li>
+            <li><a href="tlogin.html"><i class="icon-signout"></i> Выйти</a></li>
+        </ul>
+        <div class="tab-content">
+            <h2>Заданий пока нет</h2>
+            <div class="no-task">
+                <p>Пока что новых заданий нет. Как только они появятся, новость об этом будет размещена <a
+                        href="index.html">на вашей главной странице</a>. Также вы можете подписаться на рассылку
+                   новостей <a href="profile.html#sub">в вашем профиле</a>.</p>
+            </div>
+            <hr/>
+            <h2>Другие задания</h2>
+            <ul>
+                <li><a href="#">Интегрирование по частям</a></li>
+                <li><a href="#">Разрезания (дополнительное)</a></li>
+            </ul>
+        </div>
+
+    </div>
+{% endblock %}

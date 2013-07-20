@@ -1,0 +1,38 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>{% block title %}Дистанционный кружок "Дважды Два"{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="{% static 'bootstrap/css/bootstrap.css' %}" rel="stylesheet" media="screen">
+    <link href="{% static 'font-awesome/css/font-awesome.css' %}" rel="stylesheet" media="screen">
+    <link href="{% static 'datepicker/css/datepicker.css' %}" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="{% static 'markitup/skins/simple/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'markitup/sets/default/style.css' %}" />
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+<body class="admin">
+<div class="container">
+    <header id="header" class="clearfix">
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container" style="width: auto; padding: 0 20px">
+                    <a class="brand" href="#">Админка кружка</a>
+                    <ul class="nav">
+                        {% block nav %}{% endblock %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    {% block content %}{% endblock %}
+</div>
+<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+<script type="text/javascript" src="/static/bootstrap/js/bootstrap.js"></script>
+<script type="text/javascript" src="{% static 'datepicker/js/bootstrap-datepicker.js' %}"></script>
+<script type="text/javascript" src="{% static 'markitup/jquery.markitup.js' %}"></script>
+<script type="text/javascript" src="{% static 'markitup/sets/default/set.js' %}"></script>
+{% block script %}{% endblock %}
+</body>
+</html>

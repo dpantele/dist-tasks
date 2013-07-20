@@ -1,68 +1,9 @@
-{% extends "base.html" %}
+{% extends "tlogin.html" %}
 
-{% block content %}
-    <p>Дистанционный кружок &laquo;Дважды Два&raquo; &mdash; математический кружок для школьников, в котором ученики
-        занимаются там, где им это удобно. <a href="#">Узнать подробнее о работе кружка</a></p>
-    <form class="form-horizontal">
-        <fieldset>
-            <legend>Вход на сайт</legend>
-            <p>Для регистрации и просмотра заданий участников введите свой e-mail</p>
-
-            <div class="control-group login-email">
-                <label class="control-label" for="inputEmail">Email</label>
-
-                <div class="controls">
-                    <input type="email" id="inputEmail" name="email" autofocus tabindex="1">
-                </div>
-            </div>
-            <div class="login-choice">
-                <div class="row login-text">
-                    <div class="span4">
-                        <p>Если вы ещё не участвовали в работе кружка, создайте учётную запись преподавателя:</p>
-                    </div>
-                    <div class="span4">
-                        <p>Если вы уже зарегистрированы, мы отправим вам на почту ссылку для входа:</p>
-                    </div>
-                    <div class="span4">
-                        <p>Если вы задавали пароль вашего аккаунта преподавателя, можете войти с его помощью:</p>
-                    </div>
-                </div>
-                <div class="row login-buttons">
-                    <div class="span4">
-                        <a href="register1.html" tabindex="3" class="btn btn-large btn-success">Зарегистрироваться</a>
-                    </div>
-                    <div class="span4">
-                        <input type="submit" value="Отправить ссылку" class="btn btn-large btn-primary" tabindex="4"/>
-                    </div>
-                    <div class="span4">
-                        <div class="input-append">
-                            <input type="password" placeholder="Пароль" name="password" tabindex="2"/>
-                            <input type="submit" value="Войти" class="btn" tabindex="5"/>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </fieldset>
-    </form>
-    {#    {% if form.errors %}#}
-    {#        <p>Your username and password didn't match. Please try again.</p>#}
-    {#    {% endif %}#}
-    {##}
-    {#    <form method="post" action="{% url 'django.contrib.auth.views.login' %}">#}
-    {#        {% csrf_token %}#}
-    {#        <table>#}
-    {#            <tr>#}
-    {#                <td>{{ form.username.label_tag }}</td>#}
-    {#                <td>{{ form.username }}</td>#}
-    {#            </tr>#}
-    {#            <tr>#}
-    {#                <td>{{ form.password.label_tag }}</td>#}
-    {#                <td>{{ form.password }}</td>#}
-    {#            </tr>#}
-    {#        </table>#}
-    {##}
-    {#        <input type="submit" value="login" />#}
-    {#        <input type="hidden" name="next" value="{{ next }}" />#}
-    {#    </form>#}
-
+{% block alerts %}
+<div class="alert alert-error">
+  Участник с e-mail <strong>test@example.com</strong> не зарегистрирован. Проверьте правильность адреса или
+  нажмите кнопку &laquo;Зарегистрироваться&raquo; для регистрации нового участника.
+</div>
 {% endblock %}
+{% block email %}test@example.com{% endblock %}

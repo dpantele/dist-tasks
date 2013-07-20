@@ -1,0 +1,58 @@
+{% extends "base_auth.html" %}
+
+{% block title %}Управление участниками - {{ block.super }}{% endblock %}
+
+{% block content %}
+    <div class="page-header">
+        <h1>Иванов Иван <small>Распределение</small></h1>
+    </div>
+    <div class="tabbable tabs-left">
+        <ul class="nav nav-tabs">
+            <li><a href="index.html"><i class="icon-home"></i> Главная</a></li>
+            <li class="active"><a href="#">Иванов Иван</a></li>
+            <li style="margin-top: 20px"><a href="new_child.html"><i class="icon-plus-sign"></i> Новый участник</a></li>
+            <li><a href="profile.html"><i class="icon-cogs"></i> Настройки</a></li>
+            <li><a href="tlogin.html"><i class="icon-signout"></i> Выйти</a></li>
+        </ul>
+        <div class="tab-content">
+            <p>Мы посмотрим на результаты тестирования и определим группу. Обычно это происходит в течении недели.
+                Если у нас будут какие-либо вопросы, мы напишем вам письмо.</p>
+
+            <p>А пока мы предлагаем вашему вниманию пример задания &mdash; &laquo;Разрезания&raquo;. Оно не является
+                обязательным и уже было размещено в информации о кружке. Тем не менее, если вы его ещё не решали, мы настоятельно рекомендуем
+                это сделать. Также из данного занятия вы можете понять, как примерно будут проходить занятия.</p>
+
+            <p><a href="#" class="btn btn-primary btn-large">Скачать задание &laquo;Разрезания&raquo;</a></p>
+
+            <p>Обычно, чтобы получить следующие задание, вам необходимо будет заполнить результаты предыдущего.
+               Поскольку это задание не является обязательным, то результаты сообщать не обязательно. Но будем очень
+               признательны, если вы это сделаете:
+            </p>
+            <form class="form-horizontal">
+            {% with range="12345678"|make_list %}
+                {% for task in range %}
+                <div class="control-group">
+                    <label class="control-label" for="input-task{{ task }}">Задача {{ task }}</label>
+
+                    <div class="controls">
+                        <select id="input-task{{ task }}" required class="input-xxlarge">
+                            <option disabled selected>выберите</option>
+                            <option>не решена и решение не разобрано или непонятно</option>
+                            <option>не решена, но решение разобрано и понятно</option>
+                            <option>решена с подсказкой</option>
+                            <option>решена самостоятельно</option>
+                        </select>
+                    </div>
+                </div>
+                {% endfor %}
+            {% endwith %}
+                <div class="control-group">
+                    <div class="controls">
+                        <a href="#" class="btn btn-primary">Сохранить</a>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+{% endblock %}

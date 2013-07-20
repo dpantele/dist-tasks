@@ -1,0 +1,30 @@
+{% extends 'base_admin.html' %}
+{% block nav %}
+    <li class="active"><a href="#">Задания</a></li>
+    <li><a href="admin_students.html">Участники</a></li>
+    <li><a href="new_students.html">Новые участники</a></li>
+{% endblock %}
+{% block content %}
+    <h1>Задания <a href="admin_task_add.html" class="btn">Новое</a></h1>
+    <div class="row task">
+        <div class="span4">Интегрирование по частям</div>
+        <div class="span8"><a href="admin_task_edit.html" class="btn btn-mini">Изменить</a> <a
+                href="admin_task_assign.html" class="btn btn-mini">Ученики</a> <a href="admin_task_score.html"
+                                                                                  class="btn btn-mini">Результаты</a>
+        </div>
+    </div>
+    <div class="row task">
+        <div class="span4">Вступительный тест</div>
+        <div class="span8"><a href="admin_task_edit.html" class="btn btn-mini">Изменить</a> <a
+                href="admin_task_assign.html" class="btn btn-mini">Ученики</a> <a href="admin_task_score.html"
+                                                                                  class="btn btn-mini">Результаты</a>
+        </div>
+    </div>
+    <div class="row task">
+        <div class="span4">Разрезания</div>
+        <div class="span8"><a href="admin_task_edit.html" class="btn btn-mini">Изменить</a> <a
+                href="admin_task_assign.html" class="btn btn-mini">Ученики</a> <a href="admin_task_score.html"
+                                                                                  class="btn btn-mini">Результаты</a>
+        </div>
+    </div>
+{% endblock %}

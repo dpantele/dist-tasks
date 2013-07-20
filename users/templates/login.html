@@ -2,10 +2,12 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-    <form method="post">
-        {% csrf_token %}
-        {{ form | crispy }}
-        <input type="submit" name="login" value="Login using password">
-        <input type="submit" name="recover" value="Login using email">
-    </form>
+    <div class="row">
+        <form method="post" class="form-horizontal span6 offset3">
+            {% csrf_token %}
+            {{ form | crispy }}
+            <input type="submit" name="login" value="Login using password" class="btn btn-primary btn-large">
+            <input type="submit" name="recover" value="Login using email" class="btn btn-large">
+        </form>
+    </div>
 {% endblock %}

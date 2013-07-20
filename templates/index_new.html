@@ -3,10 +3,29 @@
 {% block title %}Управление участниками - {{ block.super }}{% endblock %}
 
 {% block content %}
-<div class="alert alert-success">
-  Добро пожаловать, Дима. Если вы вошли с чужого компьютера, не забудьте по завершении работы нажать ссылку &laquo;Выйти&raquo;
-  выше.
-</div>
-    <h1>Управление участниками</h1>
-<p>Приветствуем вас в нашем кружке. Вы ещё не зарегистрировали ни одного участника. </p>
+    <div class="page-header">
+        <h1>Управление участниками</h1>
+    </div>
+    <div class="alert alert-success">
+      Добро пожаловать, Дима. Если вы вошли с чужого компьютера, не забудьте по завершении работы нажать ссылку &laquo;Выйти&raquo;
+      выше.
+    </div>
+    <div class="tabbable tabs-left">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#"><i class="icon-home"></i> Главная</a></li>
+            <li style="margin-top: 20px"><a href="new_child.html"><i class="icon-plus-sign"></i> Новый участник</a></li>
+            <li><a href="profile.html"><i class="icon-cogs"></i> Настройки</a></li>
+            <li><a href="tlogin.html"><i class="icon-signout"></i> Выйти</a></li>
+        </ul>
+        <div class="tab-content">
+            <p>Приветствуем вас в нашем кружке. Вы ещё не зарегистрировали ни одного участника.
+    Для регистрации воспользуйтесь ссылкой слева. Если вы хотите изменить e-mail, изменить ваши подписки, добавить или
+    заменить пароль, то вы можете это сделать <a href="#">на странице вашего профиля</a></p>
+
+            <p>Если у вас будут какие-либо вопросы, возможно вы найдёте ответы на <a href="#">странице
+        информации о кружке</a>. Также их можно писать на наш адрес <a href="mailto:dist@mathbaby.ru">dist@mathbaby.ru</a>.</p>
+
+            <p><em>С уважением,<br/>Команда Творческой Лаборатории &laquo;Дважды Два&raquo;</em></p>
+        </div>
+    </div>
 {% endblock %}

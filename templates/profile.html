@@ -1,0 +1,95 @@
+{% extends "base_auth.html" %}
+{% load webdesign %}
+
+{% block title %}Настройки профиля - {{ block.super }}{% endblock %}
+
+{% block content %}
+    <div class="page-header">
+        <h1>Настройки профиля</h1>
+    </div>
+    <div class="tabbable tabs-left">
+        <ul class="nav nav-tabs">
+            <li><a href="index.html"><i class="icon-home"></i> Главная</a></li>
+            <li><a href="tested_child.html">Иванов Иван</a></li>
+            <li><a href="task.html">Петухов Алексей</a></li>
+            <li style="margin-top: 20px"><a href="new_child.html"><i class="icon-plus-sign"></i> Новый участник</a></li>
+            <li class="active"><a href="profile.html"><i class="icon-cogs"></i> Настройки</a></li>
+            <li><a href="tlogin.html"><i class="icon-signout"></i> Выйти</a></li>
+        </ul>
+        <div class="tab-content">
+            <h2>О вас <a href="#" class="btn btn-mini">Изменить данные</a></h2>
+            <dl class="dl-horizontal">
+                <dt>Ваше имя</dt>
+                <dd>Дима</dd>
+
+                <dt>Телефон</dt>
+                <dd>не указан</dd>
+            </dl>
+
+            <h2>E-mail</h2>
+            <div class="alert">
+                E-mail <strong>user2@example.com</strong> был успешно добавлен. Чтобы сделать его своим основным
+                или отправить на него подписки, вам необходимо подтвердить свой доступ к нему. Нажмите кнопку
+                &laquo;Отправить ссылку для проверки&raquo; рядом с адресом.
+            </div>
+            <ul class="unstyled email-list">
+                <li class="clearfix">user@example.com <span class="label label-info">Основной</span>
+                    <div class="email-actions"><a href="#" class="btn btn-small btn-danger">Удалить</a></div>
+                </li>
+                <li class="clearfix">user2@example.com <span class="label label-warning">Не проверен</span>
+                    <div class="email-actions"><a href="#" class="btn btn-small">Отправить ссылку для проверки</a> <a
+                            href="#" class="btn btn-small btn-danger">Удалить</a></div>
+                </li>
+                <li class="clearfix">user3@example.com
+                    <div class="email-actions"><a href="#" class="btn btn-small">Сделать основным</a> <a
+                            href="#" class="btn btn-small btn-danger">Удалить</a></div>
+                </li>
+            </ul>
+            <form class="form-inline">
+                <input type="email" placeholder="Email" required>
+                <a href="#" class="btn">Добавить</a>
+            </form>
+
+            <h2 id="sub">Подписки</h2>
+            <p>В данный момент имеются следующие подписки:</p>
+            <dl class="dl-horizontal">
+                <dt>user@example.com</dt>
+                <dd>Петухов Алексей, новости <a class="" href="#" title="Удалить"><i class="icon-remove-circle"></i></a></dd>
+                <dd>Общие оповещения <a class="" href="#" title="Удалить"><i class="icon-remove-circle"></i></a></dd>
+
+                <dt>user2@example.com</dt>
+                <dd>E-mail не проверен, подписок не может быть</dd>
+                <dt>user3@example.com</dt>
+                <dd>Подписок нет</dd>
+            </dl>
+            <h3>Добавить подписки</h3>
+            <form class="form-inline">
+            <p>Отправлять на <select><option>user@example.com</option><option>user3@example.com</option></select></p>
+            <p>
+                <label class="checkbox inline">
+                    <input type="checkbox" id="inlineCheckbox1" value="option1"> Петухов Алексей, новости
+                </label>
+                <label class="checkbox inline">
+                    <input type="checkbox" id="inlineCheckbox2" value="option2"> Иванов Иван, новости
+                </label>
+            </p>
+            <p>
+                <a href="#" class="btn">Добавить</a>
+            </p>
+            </form>
+            <h2>Управление паролем</h2>
+            <p>В данный момент пароль <strong>не установлен</strong>. Это означает, что каждый раз, когда вам нужно
+            будет войти на сайт кружка, мы будем отправлять ссылку для однократного входа на ваш e-mail. Если вас
+            не устраивает необходимость иметь доступ к e-mail, установите пароль, который
+            вы будете вводить при входе.</p>
+            <p><a href="#" class="btn">Установить пароль</a></p>
+            <h2>Данные участников</h2>
+            <p>Если вы указали что-то неверно при регистрации или какая-либо информация изменилась, вы можете это исправить здесь</p>
+            <h3>Иванов Иван <a href="#" class="btn btn-mini">Изменить данные</a></h3>
+            <p><em>Тут данные профиля, долго выписывать.</em></p>
+            <h3>Петухов Алексей <a href="#" class="btn btn-mini">Изменить данные</a></h3>
+            <p><em>Тут тоже данные профиля, тоже долго выписывать.</em></p>
+        </div>
+
+    </div>
+{% endblock %}

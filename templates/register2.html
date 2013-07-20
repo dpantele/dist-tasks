@@ -1,35 +1,16 @@
-{% extends "base.html" %}
+{% extends "base_anon.html" %}
 
 {% block title %}Регистрация - {{ block.super }}{% endblock %}
 
 {% block content %}
 <h1>Регистрация</h1>
-<p>На e-mail <strong>user@example.com</strong> (<a href="#" class="">нажмите сюда если вы ошиблись при вводе адреса
-</a>) была отправлено письмо для проверки. Пока оно идёт, укажите, как к вам обращаться в письмах, а также ваш телефон:</p>
-    <form class="form-horizontal ">
-        <div class="control-group">
-            <label class="control-label" for="inputName">Ваше имя</label>
-
-            <div class="controls">
-                <input type="text" id="inputName" name="name" class="input-xlarge" required>
-                <span class="help-block">Обычно в качестве данных указывают имя и отчество или имя и фамилию, но
-                вы вольны указать то, что вам будет удобно.</span>
-            </div>
-        </div>
-        <div class="control-group">
-            <label class="control-label" for="inputPhone">Телефон</label>
-
-            <div class="controls">
-                <input type="text" id="inputPhone" name="phone" class="input-xlarge">
-                <span class="help-block">Мы его будем использовать только в какой-то исключительной ситуации. В
-                принципе, его можно и не указывать.</span>
-            </div>
-
-        </div>
-        <div class="control-group">
-            <div class="controls">
-                <button type="submit" class="btn btn-primary">Cохранить</button>
-            </div>
-        </div>
-    </form>
+<p>На e-mail <strong>user@example.com</strong> (<a href="register_edit.html" class="">нажмите сюда если вы ошиблись при вводе адреса
+</a>) была отправлено письмо c дальнейшими инструкциями. Если оно всё ещё не пришло:</p>
+    <ul>
+    <li>Вы указали <strong>user@example.com</strong> в качестве вашего e-mail. Это точно правильный адрес? Если нет,
+        <a href="register_edit.html">воспольуйтесь этой ссылкой</a>, чтобы указать правильный адрес.</li>
+    <li>Пожалуйста, проверьте папку "Спам". Если оно оказалось там, пожалуйста, <a href="register_spam.html">перейдите по этой ссылке</a>.</li>
+    <li>Если ничего не помогло, мы можем отправить письмо ещё раз:</li>
+    </ul>
+    <a href="register3.html" class="btn">Отправить письмо ешё раз</a>
 {% endblock %}

@@ -1,0 +1,46 @@
+{% extends "base_auth.html" %}
+{% load webdesign %}
+
+{% block title %}Управление участниками - {{ block.super }}{% endblock %}
+
+{% block content %}
+    <div class="page-header">
+        <h1>Управление участниками</h1>
+    </div>
+    <div class="tabbable tabs-left">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#"><i class="icon-home"></i> Главная</a></li>
+            <li><a href="tested_child.html">Иванов Иван</a></li>
+            <li><a href="task.html">Петухов Алексей</a></li>
+            <li style="margin-top: 20px"><a href="new_child.html"><i class="icon-plus-sign"></i> Новый участник</a></li>
+            <li><a href="profile.html"><i class="icon-cogs"></i> Настройки</a></li>
+            <li><a href="tlogin.html"><i class="icon-signout"></i> Выйти</a></li>
+        </ul>
+        <div class="tab-content">
+            <h2>Новости</h2>
+            <div class="news">
+                <div class="news-item clearfix">
+                    <div class="news-date"><span class="news-day">11</span>июнь</div>
+                    <div class="news-item-for">Ученик: Иванов Иван</div>
+                    <p>Иванов Иван прошёл вступительный тест. Сейчас ему определяют группу.
+                        На странице участника можно скачать и сдать демонстрационное задание.</p>
+                </div>
+                <div class="news-item clearfix">
+                    <div class="news-date"><span class="news-day">2</span>июнь</div>
+                    <div class="news-item-for">Ученик: Петухов Алексей</div>
+                    <p>Группе выдано задание №1, &laquo;Интегрирование по частям&raquo;. Это задания рассказывает
+                    об очень важной технике интегрирования, которая помогает вычислить множество интегралов.
+                    Задание уже доступно на странице участника (лучше тут побольше текста, чтобы письмо было
+                    содержательнее).</p>
+                </div>
+                <div class="news-item clearfix">
+                    <div class="news-date"><span class="news-day">1</span>июнь</div>
+                    <div class="news-item-for">Ученик: Петухов Алексей</div>
+                    <p>Петухов Алексей прошёл вступительлный тест. Сейчас ему определяют группу.
+                        На странице участника можно скачать и сдать демонстрационное задание.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

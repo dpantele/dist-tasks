@@ -3,23 +3,109 @@
 {% block title %}Управление участниками - {{ block.super }}{% endblock %}
 
 {% block content %}
-    <h1>Управление участниками</h1>
-<div class="alert alert-success">
-  Добро пожаловать, Дима. Если вы вошли с чужого компьютера, не забудьте по завершении работы нажать ссылку &laquo;Выйти&raquo;
-  выше.
-</div>
-<div class="row"><div class="offset2 span9" style="border-left: #ddd solid 1px; padding: 10px 0">
-    <div class="span2" style="margin-left: -140px; text-align: right;">
-        <div><a class="btn btn-success" style="padding: 3px 5px 3px 5px; border-radius: 6px 0 0 6px">
-            <span style="font-weight: bold">+</span> Новый участник
-        </a>
+    <div class="page-header">
+        <h1>Регистрация нового участника
+            <small>Информация об участнике</small>
+        </h1>
+    </div>
+    <div class="tabbable tabs-left">
+        <ul class="nav nav-tabs">
+            <li><a href="index_new.html"><i class="icon-home"></i> Главная</a></li>
+            <li style="margin-top: 20px"><a href="new_child.html"><i class="icon-plus-sign"></i> Новый участник</a></li>
+            <li><a href="profile.html"><i class="icon-cogs"></i> Настройки</a></li>
+            <li><a href="tlogin.html"><i class="icon-signout"></i> Выйти</a></li>
+        </ul>
+        <div class="tab-content">
+            <p>Для регистрации нового участника необходимо указать некоторую информацию. Все
+                поля обязательны для заполнения.</p>
+
+            <form class="form-horizontal">
+                <div class="control-group">
+                    <label class="control-label" for="input-last-name">Фамилия участника</label>
+
+                    <div class="controls">
+                        <input type="text" id="input-last-name" name="last-name" class="input-xxlarge" required>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="input-first-name">Имя</label>
+
+                    <div class="controls">
+                        <input type="text" id="input-first-name" name="first-name" class="input-xxlarge" required>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="input-second-name">Отчество</label>
+
+                    <div class="controls">
+                        <input type="text" id="input-second-name" class="input-xxlarge" required>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="input-birthday">Дата рождения</label>
+
+                    <div class="controls">
+                        <input type="text" id="input-birthday" class="input-small" required value="01.01.2000">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="input-year">Класс</label>
+
+                    <div class="controls">
+                        <select id="input-year" required>
+                            <option disabled selected>выберите</option>
+                            <option>дошкольник</option>
+                            <option>1 класс</option>
+                            <option>2 класс</option>
+                            <option>3 класс</option>
+                            <option>4 класс</option>
+                            <option>5 класс</option>
+                            <option>6 класс</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="input-place">Населённый пункт</label>
+
+                    <div class="controls">
+                        <input type="text" id="input-place" class="input-xxlarge" required>
+                <span class="help-block">Если участник учится &mdash; укажите место, где находится учебное заведение.
+                    Иначе &mdash; где проживает.</span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="input-school">Название образовательного учереждения</label>
+
+                    <div class="controls">
+                        <input type="text" id="input-school" class="input-xxlarge">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="input-school">Получать новости на e&#8209;mail</label>
+
+                    <div class="controls">
+                        <select id="input-email" required>
+                            <option selected>не получать</option>
+                            <option>user@example.com</option>
+                        </select>
+                <span class="help-block">Вы можете подписаться на получение новостей для этого ученика. В противном
+                    случае все новости будут доступны только на сайте (в частности, оповещения о новых заданиях).
+                </span>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="controls">
+                        <a href="test_child.html" class="btn btn-primary">Зарегистрировать</a> <a href="index_new.html">отмена</a>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 
-    <p style="text-align: justify;  padding-left: 15px">Приветствуем вас в нашем кружке. Вы ещё не зарегистрировали ни одного участника.
-    Для регистрации воспользуйтесь ссылкой слева. Если вы хотите изменить e-mail, изменить ваши подписки, добавить или
-    заменить пароль, то вы можете это сделать <a href="#">на странице вашего профиля</a></p>
-    <p style="text-align: justify; padding-left: 15px">Если у вас будут какие-либо вопросы, возможно вы найдёте ответы на <a href="#">странице
-        информации о кружке</a>. Также их можно писать на наш адрес <a href="mailto:dist@mathbaby.ru">dist@mathbaby.ru</a>.</p>
-    <p style="padding-left: 15px"><em>С уважением,<br/>Команда Творческой Лаборатории &laquo;Дважды Два&raquo;</em></p></div></div>
+
+{% endblock %}
+{% block script %}
+    <script type="text/javascript">
+        $('#input-birthday').datepicker({format: 'dd.mm.yyyy', viewMode: 2, weekStart: 1})
+    </script>
 {% endblock %}

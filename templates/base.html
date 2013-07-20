@@ -1,16 +1,39 @@
+{% load staticfiles %}
 <!DOCTYPE html>
-<html>
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
 <head>
-    <title>Login</title>
+    <title>{% block title %}Дистанционный кружок "Дважды Два"{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
-    <link href="/static/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="{% static 'bootstrap/css/bootstrap.css' %}" rel="stylesheet" media="screen">
+    <link href="{% static 'font-awesome/css/font-awesome.css' %}" rel="stylesheet" media="screen">
+    <link href="{% static 'datepicker/css/datepicker.css' %}" rel="stylesheet" media="screen">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
 </head>
 <body>
 <div class="container">
-{% block content %}{% endblock %}
+    <header id="header" class="clearfix">
+        <div class="row">
+            <div class="span5" id="logo"><a href="/" title="Главная">
+                <img src="{% static 'img/logo.png' %}" alt="Логотип ТЛ 2х2">
+            </a>
+            </div>
+            <div class="span7 header-text">
+                <span class="site-title">Дистанционный кружок</span><br/>
+                По любым вопросам пишите на <strong><a href="mailto:dist@mathbaby.ru">dist@mathbaby.ru</a></strong>
+            </div>
+        </div>
+        <nav id="navigation" role="navigation" class="clearfix">
+            <ul class="links main-menu clearfix">
+                {% block links %}{% endblock %}
+            </ul>
+        </nav>
+    </header>
+    {% block content %}{% endblock %}
 </div>
 <script src="http://code.jquery.com/jquery.js"></script>
 <script src="/static/bootstrap/js/bootstrap.js"></script>
+<script src="{% static 'datepicker/js/bootstrap-datepicker.js' %}"></script>
+{% block script %}{% endblock %}
 </body>
 </html>
