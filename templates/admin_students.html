@@ -1,0 +1,31 @@
+{% extends 'base_admin.html' %}
+{% block nav %}
+    <li><a href="admin_tasks.html">Задания</a></li>
+    <li class="active"><a href="#">Участники</a></li>
+    <li><a href="new_students.html">Новые участники</a></li>
+{% endblock %}
+{% block content %}
+    <h1>Участники</h1>
+    <table class="table">
+        <thead>
+            <tr><th>Фамилия, Имя</th><th>Класс</th><th>Группа</th><th>&nbsp;</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Иванов Иван</td><td>1 класс</td><td>2015-одуванчик</td><td><a href="#">Профиль</a></td></tr>
+            <tr><td>Петухов Алексей</td><td>15 класс</td><td>2016-пингвин</td><td>&nbsp;</td></tr>
+            <tr><td>Александр Белятлетдинов</td><td>не учится</td><td>2016-пингвин</td><td>&nbsp;</td></tr>
+        </tbody>
+    </table>
+{% endblock %}
+{% block script %}
+<script type="text/javascript">
+    var students = [
+        {
+            firstname: "Иван",
+            lastname: "Иванов",
+            school_year: 1,
+            group: "id"
+        },
+    ]
+</script>
+{% endblock %}
